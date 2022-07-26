@@ -13,6 +13,7 @@ root.render(
       <Routes>
       
         <Route path='/easy' element={<Easy />}/>
+        <Route path='/medium' element={<Medium />} />
         <Route path='/hard' element={<Hard />}/>
       </Routes>
     </Router>
@@ -26,7 +27,11 @@ function App() {
     </div>
   )
 }
-
+function Medium() {
+  return (
+    <h5>Medium Difficulty is under construction.</h5>
+  )
+}
 function Header() {
   function handleClick(e){
     console.log(e.target.id)

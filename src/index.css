@@ -104,8 +104,8 @@ h1 {
   
 }
 #choiceEasy {
-  background-color: black;
-  color: white;
+  background-color: white;
+  color: black;
 }
 .choice:active {
   background-color: blue;
