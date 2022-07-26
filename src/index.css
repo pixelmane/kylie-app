@@ -5,9 +5,149 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  justify-content: center;
+  
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+ #keyPad {
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 300px;
+ }
+
+ .numberInput {
+  background-color: white;
+  border: 3px dashed black;
+  margin: 10px;
+  width: 60px;
+  height: 60px;
+  font-size: 30px;
+ }
+.numberInput:active {
+  background-color: black;
+  color: white;
+}
+ .delete {
+  margin: 10px;
+  width: 80px;
+  height: 60px;
+  font-size: 20px;
+  background-color: black;
+  color: white;
+ }
+ .delete:active {
+  background-color: white;
+  color: black;
+ }
+
+ #guessBox {
+  display: grid;
+  margin-top: 10px;
+  height: 50px;
+  width: 100px;
+  color: green;
+  background-color: white;
+  
+  
+  font-size: 45px;
+  font-weight: bold;
+  text-align: center;
+ }
+.choice {
+  width: 100px;
+  height: 50px;
+  font-weight: bold;
+  font-size: 18px;
+  background-color: white;
+  color: black;
+
+}
+h1 {
+  padding: 0;
+  margin: 0;
+}
+
+#unicornCont {
+  width: 300px;
+  height: 200px;
+  display: flex;
+  align-content: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+#unicorn {
+  background-image: url("unicorn.png");
+  background-size: cover;
+  height: 40px;
+  width: 40px;
+}
+#questionBox {
+  font-size: 15px;
+  margin-top: 10px;
+  background-color: azure;
+  border: 3px solid black;
+  border-radius: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center ;
+  width: 300px;
+  
+}
+#choiceEasy {
+  background-color: black;
+  color: white;
+}
+.choice:active {
+  background-color: blue;
+}
+ #guessCont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ }
+ #difficulty {
+  display: flex;
+  justify-content: center;
+ }
+ #numPadCont {
+  background-color: lightblue;
+ }
+@keyframes appear {
+  0% {
+    opacity: 0;
+    top:-50px
+  }
+  50% {
+    opacity: 1;
+    top: 200px
+  }
+  100% {
+    opacity: 0;
+    top: 500px;
+  }
+  
+}
+ #animate {
+  
+  display: none;
+  justify-content: center;
+  position: absolute;
+  top: 220px;
+  width: 300px;
+  opacity: 0;
+  
+}
+#animate h2 {
+  width: auto;
+  background-color: rgba(256,256,256,1);
+  
+  font-size: 50px;
 }
