@@ -31,6 +31,7 @@ code {
   font-size: 30px;
   display: grid;
   justify-content: center;
+  align-items: center;
  }
 .numberInput:active {
   background-color: black;
@@ -46,6 +47,7 @@ code {
   text-align: center;
   display: grid;
   justify-content: center;
+  align-items: center;
  }
  .delete:active {
   background-color: white;
