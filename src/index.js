@@ -203,7 +203,7 @@ function Medium() {
   const [randomNumber2, set2] = useState(0);
   
   const [streak, setStreak] = useState(0)
-  const [name, setName] = useState('')
+  const [name, setName] = useState('Mom')
   const names = ['Jordan', 'Julia', 'Mom', 'Dad', 'Jynx', 'Moxxi', 'Grandma']
   
   function handleStart() {
@@ -213,7 +213,7 @@ function Medium() {
     setName(names[randoNamePick])
     let random1 = Math.floor(Math.random() * 20)
     set1(random1)
-    set2(Math.floor(Math.random() * 10))
+    set2(Math.floor((Math.random() * 5)+4))
     console.log(random1)
   }
   
@@ -259,7 +259,7 @@ function Hard() {
   const [randomNumber2, set2] = useState(0);
   
   const [streak, setStreak] = useState(0)
-  const [name, setName] = useState('')
+  const [name, setName] = useState('Dad')
   const names = ['Jordan', 'Julia', 'Mom', 'Dad', 'Jynx', 'Moxxi', 'Grandma']
   
   function handleStart() {
@@ -300,10 +300,8 @@ function Hard() {
     <div>
        <div id='questionBox'>
       <h1>{name} is wondering: </h1>
-      <h1>what is{randomNumber1} x {randomNumber2}?</h1>
+      <h1>what is {randomNumber1} x {randomNumber2}?</h1>
      </div>
-      
-      
       <NumPad handleSubmit={handleSubmit} />
       <div id='animate'><h2>{streak} in a row!</h2></div>
       <UnicornField streak={streak}/>
