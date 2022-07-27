@@ -136,9 +136,9 @@ h1 {
   width: 300px;
   
 }
-#choiceEasy {
-  background-color: white;
-  color: black;
+#choiceHome {
+  background-color: black;
+  color: white;
 }
 .choice:active {
   background-color: blue;

@@ -43,6 +43,8 @@ function Header() {
         document.getElementById('choiceMedium').style.color = 'black'
         document.getElementById('choiceHard').style.backgroundColor = 'white'
         document.getElementById('choiceHard').style.color = 'black';
+        document.getElementById('choiceHome').style.backgroundColor = 'white'
+        document.getElementById('choiceHome').style.color = 'black';
         break;
         case 'choiceMedium':
         document.getElementById('choiceEasy').style.backgroundColor = 'white'
@@ -51,6 +53,8 @@ function Header() {
         document.getElementById('choiceMedium').style.color = 'white'
         document.getElementById('choiceHard').style.backgroundColor = 'white'
         document.getElementById('choiceHard').style.color = 'black';
+        document.getElementById('choiceHome').style.backgroundColor = 'white'
+        document.getElementById('choiceHome').style.color = 'black';
         break;
       case 'choiceHard':
         document.getElementById('choiceEasy').style.backgroundColor = 'white'
@@ -59,20 +63,24 @@ function Header() {
         document.getElementById('choiceMedium').style.color = 'black'
         document.getElementById('choiceHard').style.backgroundColor = 'black'
         document.getElementById('choiceHard').style.color = 'white';
+        document.getElementById('choiceHome').style.backgroundColor = 'white'
+        document.getElementById('choiceHome').style.color = 'black';
         break;
       default: 
-      document.getElementById('choiceEasy').style.backgroundColor = 'black'
-        document.getElementById('choiceEasy').style.color = 'white'
+      document.getElementById('choiceEasy').style.backgroundColor = 'white'
+        document.getElementById('choiceEasy').style.color = 'black'
         document.getElementById('choiceMedium').style.backgroundColor = 'white'
         document.getElementById('choiceMedium').style.color = 'black'
         document.getElementById('choiceHard').style.backgroundColor = 'white'
         document.getElementById('choiceHard').style.color = 'black';
+        document.getElementById('choiceHome').style.backgroundColor = 'black'
+        document.getElementById('choiceHome').style.color = 'white';
         break;
     }
   }
   return (
     <div id='difficulty'>
-      <NavLink to='/'><button className='choice'>Home</button></NavLink>
+      <NavLink to='/'><button onClick={handleClick} id='choiceHome' className='choice'>Home</button></NavLink>
       <NavLink  to='/easy'><button  onClick={handleClick} className='choice' id='choiceEasy'>Easy</button></NavLink>
       <NavLink to='/medium'><button onClick={handleClick} className='choice' id='choiceMedium' >Medium</button></NavLink>
       <NavLink to='/hard'><button onClick={handleClick} className='choice' id='choiceHard'>Hard</button></NavLink>
@@ -87,7 +95,7 @@ function Easy() {
   
   const [streak, setStreak] = useState(0)
   const [name, setName] = useState('Moxxi')
-  const names = ['Jordan', 'Julia', 'Mom', 'Dad', 'Lily', 'Moxxi', 'Grandma']
+  const names = ['Jordan', 'Julia', 'Mom', 'Dad', 'Lily', 'Ritz', 'Moxxi', 'Grandma']
   
   function handleStart() {
     let randoNamePick = Math.floor(Math.random() * names.length)
@@ -205,7 +213,7 @@ function Medium() {
   
   const [streak, setStreak] = useState(0)
   const [name, setName] = useState('Mom')
-  const names = ['Jordan', 'Julia', 'Mom', 'Dad', 'Lily', 'Moxxi', 'Grandma']
+  const names = ['Jordan', 'Julia', 'Mom', 'Dad', 'Lily', 'Ritz', 'Moxxi', 'Grandma']
   
   function handleStart() {
     let randoNamePick = Math.floor(Math.random() * names.length)
@@ -261,7 +269,7 @@ function Hard() {
   
   const [streak, setStreak] = useState(0)
   const [name, setName] = useState('Dad')
-  const names = ['Jordan', 'Julia', 'Mom', 'Dad', 'Lily', 'Moxxi', 'Grandma']
+  const names = ['Jordan', 'Julia', 'Mom', 'Dad', 'Lily', 'Ritz', 'Moxxi', 'Grandma']
   
   function handleStart() {
     let randoNamePick = Math.floor(Math.random() * names.length)
