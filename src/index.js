@@ -66,6 +66,16 @@ function Header() {
         document.getElementById('choiceHome').style.backgroundColor = 'white'
         document.getElementById('choiceHome').style.color = 'black';
         break;
+        case 'choiceHome': 
+      document.getElementById('choiceEasy').style.backgroundColor = 'white'
+        document.getElementById('choiceEasy').style.color = 'black'
+        document.getElementById('choiceMedium').style.backgroundColor = 'white'
+        document.getElementById('choiceMedium').style.color = 'black'
+        document.getElementById('choiceHard').style.backgroundColor = 'white'
+        document.getElementById('choiceHard').style.color = 'black';
+        document.getElementById('choiceHome').style.backgroundColor = 'black'
+        document.getElementById('choiceHome').style.color = 'white';
+        break;
       default: 
       document.getElementById('choiceEasy').style.backgroundColor = 'white'
         document.getElementById('choiceEasy').style.color = 'black'
