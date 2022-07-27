@@ -123,6 +123,7 @@ h1 {
 #questionBox {
   font-size: 15px;
   margin-top: 10px;
+  margin-bottom: 10px;
   background-color:azure;
   border: 3px solid black;
   border-radius: 10px;

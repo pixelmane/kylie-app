@@ -31,11 +31,7 @@ function App() {
     </div>
   )
 }
-function Medium() {
-  return (
-    <h5>Medium Difficulty is under construction.</h5>
-  )
-}
+
 function Header() {
   function handleClick(e){
     console.log(e.target.id)
@@ -134,11 +130,11 @@ function Easy() {
       return (
     <div>
       <div id='questionBox'>
-      <h1>{name} is wondering</h1>
-      <h1>what {randomNumber1} x {randomNumber2} is?</h1>
+      <h1>{name} is wondering: </h1>
+      <h1>what is {randomNumber1} x {randomNumber2}?</h1>
      </div>
       
-      <h1>current streak: {streak}</h1>
+      
       <NumPad handleSubmit={handleSubmit} />
       <div id='animate'><h2>{streak} in a row!</h2></div>
       <UnicornField streak={streak}/>
@@ -202,8 +198,7 @@ function NumPad(props) {
     </div>
   )
 }
-
-function Hard() {
+function Medium() {
   const [randomNumber1, set1] = useState(0);
   const [randomNumber2, set2] = useState(0);
   
@@ -248,11 +243,67 @@ function Hard() {
       return (
     <div>
        <div id='questionBox'>
-      <h1>{name} is wondering</h1>
-      <h1>what {randomNumber1} x {randomNumber2} is?</h1>
+      <h1>{name} is wondering: </h1>
+      <h1>what is {randomNumber1} x {randomNumber2}?</h1>
      </div>
       
-      <h1>current streak: {streak}</h1>
+     
+      <NumPad handleSubmit={handleSubmit} />
+      <div id='animate'><h2>{streak} in a row!</h2></div>
+      <UnicornField streak={streak}/>
+    </div>
+  )
+}
+function Hard() {
+  const [randomNumber1, set1] = useState(0);
+  const [randomNumber2, set2] = useState(0);
+  
+  const [streak, setStreak] = useState(0)
+  const [name, setName] = useState('')
+  const names = ['Jordan', 'Julia', 'Mom', 'Dad', 'Jynx', 'Moxxi', 'Grandma']
+  
+  function handleStart() {
+    let randoNamePick = Math.floor(Math.random() * names.length)
+    console.log(randoNamePick)
+    console.log(names[randoNamePick])
+    setName(names[randoNamePick])
+    let random1 = Math.floor(Math.random() * 20)
+    set1(random1)
+    set2(Math.floor(Math.random() * 20))
+    console.log(random1)
+  }
+  
+  function handleSubmit(arrayTest){
+    
+   
+    let correctAnswer = randomNumber1 * randomNumber2
+    console.log(arrayTest)
+    console.log(correctAnswer)
+    // eslint-disable-next-line
+    if(arrayTest.join('') == correctAnswer){
+     
+      setStreak(prev => prev += 1)
+      document.getElementById('animate').style.display = 'flex'
+      document.getElementById('animate').style.animation = 'appear 2s'
+      setTimeout( () => {
+        document.getElementById('animate').style.display = 'none'
+        document.getElementById('animate').style.animation = 'none'}, 1000)
+    } else {
+      alert('not quite')
+      setStreak(0)
+    }
+    handleStart()
+  }
+  // eslint-disable-next-line
+  useEffect(()=> handleStart,[])
+      return (
+    <div>
+       <div id='questionBox'>
+      <h1>{name} is wondering: </h1>
+      <h1>what is{randomNumber1} x {randomNumber2}?</h1>
+     </div>
+      
+      
       <NumPad handleSubmit={handleSubmit} />
       <div id='animate'><h2>{streak} in a row!</h2></div>
       <UnicornField streak={streak}/>
