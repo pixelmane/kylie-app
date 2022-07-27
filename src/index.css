@@ -22,13 +22,15 @@ code {
  }
 
  .numberInput {
+  color: black;
   background-color: white;
   border: 3px dashed black;
   margin: 10px;
   width: 60px;
   height: 60px;
   font-size: 30px;
-  text-align: center;
+  display: grid;
+  justify-content: center;
  }
 .numberInput:active {
   background-color: black;
@@ -42,6 +44,8 @@ code {
   background-color: black;
   color: white;
   text-align: center;
+  display: grid;
+  justify-content: center;
  }
  .delete:active {
   background-color: white;
@@ -70,9 +74,32 @@ code {
   color: black;
 
 }
+
+@keyframes theRotate {
+  0% {
+    transform: rotate(0);
+  }
+  
+  100% {
+    transform:rotate(360deg);
+  }
+}
+#unicornMain {
+  background-image: url('unicornmain.png');
+  height: 300px;
+  width: 300px;
+  background-size: cover;
+  margin-top: 75px;
+  animation: theRotate 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  
+
+}
 h1 {
   padding: 0;
   margin: 0;
+  font-size: 20px;
 }
 
 #unicornCont {
@@ -94,7 +121,7 @@ h1 {
 #questionBox {
   font-size: 15px;
   margin-top: 10px;
-  background-color: azure;
+  background-color:azure;
   border: 3px solid black;
   border-radius: 10px;
   display: flex;

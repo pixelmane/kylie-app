@@ -11,7 +11,7 @@ root.render(
     <Router>
     <App />
       <Routes>
-      
+        <Route path='/' element={<UnicornMain />} />
         <Route path='/easy' element={<Easy />}/>
         <Route path='/medium' element={<Medium />} />
         <Route path='/hard' element={<Hard />}/>
@@ -19,7 +19,11 @@ root.render(
     </Router>
   </React.StrictMode>
 );
-
+function UnicornMain() {
+  return (
+    <div id='unicornMain'></div>
+  )
+}
 function App() {
   return (
     <div>
@@ -85,7 +89,7 @@ function Easy() {
   const [randomNumber2, set2] = useState(0);
   
   const [streak, setStreak] = useState(0)
-  const [name, setName] = useState('')
+  const [name, setName] = useState('Moxxi')
   const names = ['Jordan', 'Julia', 'Mom', 'Dad', 'Jynx', 'Moxxi', 'Grandma']
   
   function handleStart() {
