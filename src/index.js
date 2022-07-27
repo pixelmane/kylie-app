@@ -72,9 +72,10 @@ function Header() {
   }
   return (
     <div id='difficulty'>
-      <NavLink  to='/easy'><button  onClick={handleClick} class='choice' id='choiceEasy'>Easy</button></NavLink>
-      <NavLink to='/medium'><button onClick={handleClick} class='choice' id='choiceMedium' >Medium</button></NavLink>
-      <NavLink to='/hard'><button onClick={handleClick} class='choice' id='choiceHard'>Hard</button></NavLink>
+      <NavLink to='/'><button className='choice'>Home</button></NavLink>
+      <NavLink  to='/easy'><button  onClick={handleClick} className='choice' id='choiceEasy'>Easy</button></NavLink>
+      <NavLink to='/medium'><button onClick={handleClick} className='choice' id='choiceMedium' >Medium</button></NavLink>
+      <NavLink to='/hard'><button onClick={handleClick} className='choice' id='choiceHard'>Hard</button></NavLink>
       
     </div>
   )
@@ -86,7 +87,7 @@ function Easy() {
   
   const [streak, setStreak] = useState(0)
   const [name, setName] = useState('Moxxi')
-  const names = ['Jordan', 'Julia', 'Mom', 'Dad', 'Jynx', 'Moxxi', 'Grandma']
+  const names = ['Jordan', 'Julia', 'Mom', 'Dad', 'Lily', 'Moxxi', 'Grandma']
   
   function handleStart() {
     let randoNamePick = Math.floor(Math.random() * names.length)
@@ -204,7 +205,7 @@ function Medium() {
   
   const [streak, setStreak] = useState(0)
   const [name, setName] = useState('Mom')
-  const names = ['Jordan', 'Julia', 'Mom', 'Dad', 'Jynx', 'Moxxi', 'Grandma']
+  const names = ['Jordan', 'Julia', 'Mom', 'Dad', 'Lily', 'Moxxi', 'Grandma']
   
   function handleStart() {
     let randoNamePick = Math.floor(Math.random() * names.length)
@@ -260,7 +261,7 @@ function Hard() {
   
   const [streak, setStreak] = useState(0)
   const [name, setName] = useState('Dad')
-  const names = ['Jordan', 'Julia', 'Mom', 'Dad', 'Jynx', 'Moxxi', 'Grandma']
+  const names = ['Jordan', 'Julia', 'Mom', 'Dad', 'Lily', 'Moxxi', 'Grandma']
   
   function handleStart() {
     let randoNamePick = Math.floor(Math.random() * names.length)
